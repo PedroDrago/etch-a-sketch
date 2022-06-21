@@ -1,8 +1,9 @@
 const grid=document.querySelector("#grid");
 const buttons = document.querySelectorAll('.size-button')
 const eraseButton = document.querySelector('#erase')
+const colorButtons = document.querySelectorAll('.color-button')
+let mode = "black"
 console.log(buttons)
-
 
 function generateGrid(size){
 
@@ -13,18 +14,31 @@ function generateGrid(size){
     }
 
     
+    // let divs = document.querySelectorAll(".square");
+    // divs.forEach(div => {
+    //     div.addEventListener('mouseover', function hover(){
+    //         div.classList.add('hover')
+    //     })
+    // })
+
     let divs = document.querySelectorAll(".square");
-    divs.forEach(div => {
-        div.addEventListener('mouseover', function hover(){
-            div.classList.add('hover')
+    divs.forEach((div) => {
+        div.addEventListener('mouseover', () => {
+            if(mode==="black"){
+                div.style.backgroundColor = "#000000";
+            }
+            else if(mode==="rainbow"){
+                const rainbowColors = ['#004F2D', '#F4BFDB', "#47A8BD", "#F5E663", "#DB5A42"];
+                const randomColor = Math.floor(Math.random() * rainbowColors.length);
+                div.style.backgroundColor = rainbowColors[randomColor];
+            }
+
         })
     })
 }
 
 
 function generateGridMedium(){
-    grid.style.width="864px"
-    grid.style.height="864px"
     divs = document.querySelectorAll('.square')
     divs.forEach(div => {
         div.style.height="25px"
@@ -34,8 +48,6 @@ function generateGridMedium(){
 
 
 function generateGridSmall(){
-    // grid.style.width="928px"
-    // grid.style.height="928px"
     divs = document.querySelectorAll('.square')
     divs.forEach(div => {
         div.style.height="11.5px"
@@ -45,8 +57,6 @@ function generateGridSmall(){
 
 
 function generateGridLarge(){
-    // grid.style.width="832px"
-    // grid.style.height="832px"
     divs = document.querySelectorAll('.square')
     divs.forEach(div => {
         div.style.height="52px"
@@ -55,8 +65,6 @@ function generateGridLarge(){
 }
 
 function cleanGrid(){
-    //add code to delete everything in the grid
-    //use this function inside each conditional befor generationg the grid
     const divs = document.querySelectorAll('.square')
     divs.forEach(div => {
         div.remove();
@@ -70,6 +78,10 @@ function cleanDraw(){
     })
 
 }
+
+
+
+
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -97,3 +109,14 @@ eraseButton.addEventListener('click', () => {
     cleanDraw()
 })
 
+colorButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button.classList.contains("black")){
+            mode = "black";
+        } else if(button.classList.contains("rainbow")){
+            mode = "rainbow"
+        }
+    })
+})
+
+colorMode()

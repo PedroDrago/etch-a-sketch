@@ -11,7 +11,12 @@
     border: 0px;
     gap: 5px;
 }
-.size-button,#erase{
+#color-button-container{
+    display: flex;
+    gap: 5px;
+    border: 0px;
+}
+.size-button,#erase,.color-button{
     height: 25px;
 }
 div{
