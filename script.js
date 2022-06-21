@@ -4,15 +4,32 @@ const eraseButton = document.querySelector('#erase')
 const colorButtons = document.querySelectorAll('.color-button')
 let mode = "black"
 
+const blackButton = document.querySelector(".black")
+const rainbowButton = document.querySelector(".rainbow")
+
+blackButton.addEventListener('click', () => {
+    blackButton.classList.add("black-clicked")
+    rainbowButton.classList.remove("rainbow-clicked")
+})
+rainbowButton.addEventListener('click', () => {
+    rainbowButton.classList.add("rainbow-clicked")
+    blackButton.classList.remove("black-clicked")
+
+})
+
+
+
+
 function colorMode(){
     let divs = document.querySelectorAll(".square");
+
     divs.forEach((div) => {
         div.addEventListener('mouseover', () => {
             if(mode==="black"){
                 div.style.backgroundColor = "#000000";
             }
             else if(mode==="rainbow"){
-                const rainbowColors = ['#004F2D', '#F4BFDB', "#47A8BD", "#F5E663", "#DB5A42"];
+                const rainbowColors = ['#772D8B', '#20A4F3', "#F03A47", "#2DD881", "#F75C03"];
                 const randomColor = Math.floor(Math.random() * rainbowColors.length);
                 div.style.backgroundColor = rainbowColors[randomColor];
             }

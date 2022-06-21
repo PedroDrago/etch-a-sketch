@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="etch-a-sketch 1.png"/>
+    <link rel="shortcut icon" href="pencil-icon.png"/>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="grid"></div>
-    
-    <div id="button-container">
-        <button class="size-button" id="small">Small</button>
-        <button class="size-button" id="medium">Medium</button>
-        <button class="size-button" id="large">Large</button>
-        <button id="erase">Erase</button>
+    <div id="header-container">
+        <h1 id="header">Etch a Sketch</h1>
+    </div>
+    <div id="game">
+        <div id="grid"></div>
+            <div id="button-container">
+                <button class="size-button" id="small">Small</button>
+                <button class="size-button" id="medium">Medium</button>
+                <button class="size-button" id="large">Large</button>
+                <button id="erase">Erase</button>
 
-        <div id="color-button-container">
-            <button class="color-button black">Black</button>
-            <button class="color-button rainbow">Rainbow</button>
+                <div id="color-button-container">
+                    <button class="color-button black">Black</button>
+                    <button class="color-button rainbow">Rainbow</button>
+                </div>
+            </div>
         </div>
     </div>
-
-
 
 </body>
 </html>

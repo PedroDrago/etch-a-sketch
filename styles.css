@@ -1,27 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border: 0px solid blue;
+    background-color: grey;
+
+}
+#header{
+    font-family: "Press Start 2P", cursive;
+}
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #grid{
     display: flex;
     width: 864px;
     height: 864px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    border: 1px solid black;
+    margin-left: 85px; 
+    /* USE THIS TO ALIGN GRID AND BUTTONS WITH HEADER */
 }
 #button-container{
+    /* padding: 2px;
+    background-color: magenta; */
     display: flex;
+    flex-direction: column;
     border: 0px;
     gap: 5px;
 }
 #color-button-container{
     display: flex;
+    flex-direction: column;
     gap: 5px;
-    border: 0px;
+    border: 0px solid green;
 }
-.size-button,#erase,.color-button{
-    height: 25px;
+button{
+    width: 110px;
+    height: 40px;
+    font-family: "Press Start 2P", cursive;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-div{
+.square{
     border: 1px solid black;
     height: 52px;
     width: 52px;
+    background-color: white;
 }
 
+.size-button{
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.color-button{
+    background-color: white;
+    border: 1px solid black;
+}
+
+#erase{
+    border: 1px solid black;
+    background-color: white;
+}
+
+.size-button:hover{
+    background-color: #84C9F6;
+
+}
+
+.size-button:active{
+    background-color: #6EB2DE;
+}
+
+.black-clicked{
+    color: white;
+    background-color: black;
+}
+
+.rainbow-clicked{
+    color: white;
+    background-image: linear-gradient(to bottom right, #772D8B, #20A4F3,#2DD881, #F03A47);
+
+
+}
