@@ -3,24 +3,8 @@ const buttons = document.querySelectorAll('.size-button')
 const eraseButton = document.querySelector('#erase')
 const colorButtons = document.querySelectorAll('.color-button')
 let mode = "black"
-console.log(buttons)
 
-function generateGrid(size){
-
-    for(let i=0; i<size; i++){
-        let divs = document.createElement('div');
-        divs.classList.add('square');
-        grid.appendChild(divs)
-    }
-
-    
-    // let divs = document.querySelectorAll(".square");
-    // divs.forEach(div => {
-    //     div.addEventListener('mouseover', function hover(){
-    //         div.classList.add('hover')
-    //     })
-    // })
-
+function colorMode(){
     let divs = document.querySelectorAll(".square");
     divs.forEach((div) => {
         div.addEventListener('mouseover', () => {
@@ -37,6 +21,16 @@ function generateGrid(size){
     })
 }
 
+function generateGrid(size){
+
+    for(let i=0; i<size; i++){
+        let divs = document.createElement('div');
+        divs.classList.add('square');
+        grid.appendChild(divs)
+    }
+
+    colorMode();
+}
 
 function generateGridMedium(){
     divs = document.querySelectorAll('.square')
@@ -46,7 +40,6 @@ function generateGridMedium(){
     })
 }
 
-
 function generateGridSmall(){
     divs = document.querySelectorAll('.square')
     divs.forEach(div => {
@@ -54,7 +47,6 @@ function generateGridSmall(){
         div.style.width="11.5px"
     })
 }
-
 
 function generateGridLarge(){
     divs = document.querySelectorAll('.square')
