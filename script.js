@@ -34,23 +34,23 @@ function generateGridMedium(){
 
 
 function generateGridSmall(){
-    grid.style.width="928px"
-    grid.style.height="928px"
+    // grid.style.width="928px"
+    // grid.style.height="928px"
     divs = document.querySelectorAll('.square')
     divs.forEach(div => {
-        div.style.height="12.5px"
-        div.style.width="12.5px"
+        div.style.height="11.5px"
+        div.style.width="11.5px"
     })
 }
 
 
 function generateGridLarge(){
-    grid.style.width="832px"
-    grid.style.height="832px"
+    // grid.style.width="832px"
+    // grid.style.height="832px"
     divs = document.querySelectorAll('.square')
     divs.forEach(div => {
-        div.style.height="50px"
-        div.style.width="50px"
+        div.style.height="52px"
+        div.style.width="52px"
     })
 }
 
@@ -96,15 +96,4 @@ buttons.forEach(button => {
 eraseButton.addEventListener('click', () => {
     cleanDraw()
 })
-// if(choice==='small'){
-//     generateGrid(64*64)
-//     generateGridSmall()
-// }
-// else if (choice==='medium'){
-//     generateGrid(32*32)
-//     generateGridMedium()
-// }
-// else if(choice==='large'){
-//     generateGrid(16*16)
-//     generateGridLarge()
-// }
+
