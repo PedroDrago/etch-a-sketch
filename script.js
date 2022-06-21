@@ -72,9 +72,9 @@ function cleanGrid(){
 }
 
 function cleanDraw(){
-    let divs = document.querySelectorAll('.hover')
+    let divs = document.querySelectorAll('.square')
     divs.forEach(div => {
-        div.classList.remove('hover')
+        div.style.backgroundColor = "#FFFFFF";
     })
 
 }
@@ -119,4 +119,3 @@ colorButtons.forEach((button) => {
     })
 })
 
-colorMode()
