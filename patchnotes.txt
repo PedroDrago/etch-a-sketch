@@ -1,0 +1,5 @@
+patchnotes:
+1-Add color modes
+2-align items correctly
+3-Style the page
+4-Add github link
