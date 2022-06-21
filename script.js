@@ -1,5 +1,7 @@
 const grid=document.querySelector("#grid");
 const buttons = document.querySelectorAll('.size-button')
+console.log(buttons)
+
 
 function generateGrid(size){
 
@@ -51,17 +53,38 @@ function generateGridLarge(){
     })
 }
 
+function cleanGrid(){
+    //add code to delete everything in the grid
+    //use this function inside each conditional befor generationg the grid
+}
 
-let choice = 'large'
-if(choice==='small'){
-    generateGrid(64*64)
-    generateGridSmall()
-}
-else if (choice==='medium'){
-    generateGrid(32*32)
-    generateGridMedium()
-}
-else if(choice==='large'){
-    generateGrid(16*16)
-    generateGridLarge()
-}
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        let choice = button.id
+        if(choice==='small'){
+            generateGrid(64*64)
+            generateGridSmall()
+        }
+        else if (choice==='medium'){
+            generateGrid(32*32)
+            generateGridMedium()
+        }
+        else if(choice==='large'){
+            generateGrid(16*16)
+            generateGridLarge()
+        }
+        
+    })
+})
+// if(choice==='small'){
+//     generateGrid(64*64)
+//     generateGridSmall()
+// }
+// else if (choice==='medium'){
+//     generateGrid(32*32)
+//     generateGridMedium()
+// }
+// else if(choice==='large'){
+//     generateGrid(16*16)
+//     generateGridLarge()
+// }
