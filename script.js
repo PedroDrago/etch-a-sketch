@@ -1,5 +1,6 @@
 const grid=document.querySelector("#grid");
 const buttons = document.querySelectorAll('.size-button')
+const eraseButton = document.querySelector('#erase')
 console.log(buttons)
 
 
@@ -56,25 +57,44 @@ function generateGridLarge(){
 function cleanGrid(){
     //add code to delete everything in the grid
     //use this function inside each conditional befor generationg the grid
+    const divs = document.querySelectorAll('.square')
+    divs.forEach(div => {
+        div.remove();
+    })
+}
+
+function cleanDraw(){
+    let divs = document.querySelectorAll('.hover')
+    divs.forEach(div => {
+        div.classList.remove('hover')
+    })
+
 }
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         let choice = button.id
         if(choice==='small'){
+            cleanGrid()
             generateGrid(64*64)
             generateGridSmall()
         }
         else if (choice==='medium'){
+            cleanGrid()
             generateGrid(32*32)
             generateGridMedium()
         }
         else if(choice==='large'){
+            cleanGrid()
             generateGrid(16*16)
             generateGridLarge()
         }
         
     })
+})
+
+eraseButton.addEventListener('click', () => {
+    cleanDraw()
 })
 // if(choice==='small'){
 //     generateGrid(64*64)

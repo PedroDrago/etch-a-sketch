@@ -10,7 +10,7 @@
     border: 0px;
     gap: 5px;
 }
-.size-button{
+.size-button,#erase{
     height: 25px;
 }
 div{
