@@ -5,7 +5,14 @@
     height: 864px;
     flex-wrap: wrap;
 }
-
+#button-container{
+    display: flex;
+    border: 0px;
+    gap: 5px;
+}
+.size-button{
+    height: 25px;
+}
 div{
     border: 1px solid black;
     height: 12.5px;

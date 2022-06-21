@@ -1,4 +1,5 @@
-let grid=document.querySelector("#grid");
+const grid=document.querySelector("#grid");
+const buttons = document.querySelectorAll('.size-button')
 
 function generateGrid(size){
 
@@ -27,8 +28,7 @@ function generateGridMedium(){
         div.style.width="25px"
     })
 }
-// generateGrid(32*32)
-// generateGridMedium()
+
 
 function generateGridSmall(){
     grid.style.width="928px"
@@ -39,8 +39,7 @@ function generateGridSmall(){
         div.style.width="12.5px"
     })
 }
-// generateGrid(64*64)
-// generateGridSmall()
+
 
 function generateGridLarge(){
     grid.style.width="832px"
@@ -52,6 +51,17 @@ function generateGridLarge(){
     })
 }
 
-//small = 64x64 -> square with 12.5px each -> flexbox 928px X 928px
-//medium = 32x32 -> square with 25px each -> flexbox with 864px X 864px
-//large = 16x16 -> square with 50px each -> flexbox with 832px X 832px
+
+let choice = 'large'
+if(choice==='small'){
+    generateGrid(64*64)
+    generateGridSmall()
+}
+else if (choice==='medium'){
+    generateGrid(32*32)
+    generateGridMedium()
+}
+else if(choice==='large'){
+    generateGrid(16*16)
+    generateGridLarge()
+}
