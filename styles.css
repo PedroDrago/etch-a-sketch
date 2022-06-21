@@ -1,13 +1,15 @@
 #grid{
-    border: 0px;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto ;
+    display: flex;
+    border: 2px solid red;
+    width: 864px;
+    height: 864px;
+    flex-wrap: wrap;
 }
 
 div{
     border: 1px solid black;
-    height: 50px;
-    width: 50px;
+    height: 12.5px;
+    width: 12.5px;
 }
 
 .hover{
