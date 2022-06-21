@@ -1,17 +1,15 @@
-let master=document.querySelector("#master");
+let grid=document.querySelector("#grid");
 
-let height = prompt('Set wich grid height you wish: ')
-let width = prompt('set wich grid width you wish: ')
-size = height*width
-console.log(size)
+
+size = 16*16
 
 for(let i=0; i<size; i++){
     let divs = document.createElement('div');
-    divs.classList.add('pixel');
-    master.appendChild(divs)
+    divs.classList.add('square');
+    grid.appendChild(divs)
 }
 
-let divs = document.querySelectorAll(".pixel")
+let divs = document.querySelectorAll(".square")
 
 divs.forEach(div => {
     div.addEventListener('mouseover', function hover(){
