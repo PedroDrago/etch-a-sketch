@@ -1,5 +1,5 @@
 # odin-etch-a-sketch
-Etch-a-Sketch project passed by odin-project
+Etch-a-Sketch project from odin-project curriculum.
 
 1-Follow the instructions atop Odin’s Recipes project to set up a Git repository for this project.
 
