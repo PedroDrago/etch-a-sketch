@@ -5,11 +5,12 @@ body{
     padding: 0;
     border: 0;
     border: 0px solid blue;
-    background-color: grey;
+    background-color: #262a33;
 
 }
 #header{
     font-family: "Press Start 2P", cursive;
+    color: white;
 }
 #game{
     display: flex;
@@ -28,8 +29,7 @@ body{
     width: 864px;
     height: 864px;
     flex-wrap: wrap;
-    border: 1px solid black;
-    margin-left: 85px; 
+    margin-left: 85px;
     /* USE THIS TO ALIGN GRID AND BUTTONS WITH HEADER */
 }
 #button-container{
@@ -63,7 +63,7 @@ button{
 }
 
 .size-button{
-    background-color: lightblue;
+    background-color: #fff280;
     border: 1px solid black;
 }
 
@@ -72,22 +72,35 @@ button{
     border: 1px solid black;
 }
 
+.color-button:hover{
+    background-color: lightgray;
+}
+
 #erase{
     border: 1px solid black;
     background-color: white;
 }
+#erase:hover{
+    background-color: lightgray;
+}
+#erase:active{
+    background-color: gray;
+}
 
 .size-button:hover{
-    background-color: #84C9F6;
+    background-color: #FEE077;
 
 }
 
 .size-button:active{
-    background-color: #6EB2DE;
+    background-color: #FFD43D;
 }
 
 .black-clicked{
     color: white;
+    background-color: black;
+}
+.black-clicked:hover{
     background-color: black;
 }
 

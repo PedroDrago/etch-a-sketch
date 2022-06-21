@@ -3,9 +3,11 @@ const buttons = document.querySelectorAll('.size-button')
 const eraseButton = document.querySelector('#erase')
 const colorButtons = document.querySelectorAll('.color-button')
 let mode = "black"
-
 const blackButton = document.querySelector(".black")
 const rainbowButton = document.querySelector(".rainbow")
+
+generateGrid(32*32)
+generateGridMedium()
 
 blackButton.addEventListener('click', () => {
     blackButton.classList.add("black-clicked")
